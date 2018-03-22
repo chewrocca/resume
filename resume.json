@@ -1,0 +1,161 @@
+{
+  "basics": {
+    "name": "Matthew Fine",
+    "label": "Network and Systems Engineer",
+    "picture": "",
+    "email": "matt.fine@gmail.com",
+    "phone": "571-723-2234",
+    "website": "https://www.easytyger.com/resume",
+    "summary": "Professional Network and Systems Engineer with experience in corporate, public service and large distributed networks with a strong emphasis on scalability, supportability, and longevity",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "",
+      "region": ""
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "finematthew",
+        "url": "https://www.linkedin.com/in/finematthew/"
+      },
+      {
+        "network": "GitHub",
+        "username": "chewrocca",
+        "url": "https://github.com/chewrocca"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Netgate / pfSense",
+      "position": "Network and Systems Engineer",
+      "website": "https://www.netgate.com",
+      "startDate": "2016-01-11",
+      "endDate": "2018-03-31",
+      "summary": "",
+      "highlights": [
+        "Setup Juniper Zero Touch Provisioning on switches for fully automated deployments",
+        "Automated desktops OS and software installation and configuration using PXE boot and Kickstart to deploy no-touch provision systems",
+        "Deployed site-wide Ruckus virtualized Zone Director and Ruckus APs",
+        "Identified issues in the network related to L2 and L3 designs, implemented and documented changes",
+        "Installed and configured BIRD for FreeBSD systems to use as eBGP routers connecting to upstream internet providers",
+        "Configured GitLab for our developers and used GitLab for revision control with gitfs for SaltStack",
+        "Wrote SaltStack formulas to automate and help maintain consistency throughout the network",
+        "Setup IPsec site-to-site connectivity for satellite locations and remote employees",
+        "Leveraged Bacula backup system to develop a backup solution for our servers and databases",
+        "Procured /32 IPv6 space from ARIN",
+        "Documented all work using RST and published on internal site"
+      ]
+    },
+    {
+      "company": "Giganews / Golden Frog",
+      "position": "Senior Network Engineer",
+      "website": "https://www.goldenfrog.com",
+      "startDate": "2012-07-01",
+      "endDate": "2016-01-01",
+      "summary": "",
+      "highlights": [
+        "Identified a BGP architecture that could optimize bandwidth distribution across multiple carriers. Took the initiative to plan and implement new architecture, resulting in savings to the company and better traffic control",
+        "Developed and executed plans to consolidate equipment in six data centers into two without downtime",
+        "Deployed networking gear at sites around the world connecting to multi-homed providers",
+        "Setup DWDM to connect fiber between our data centers",
+        "Discovered and remedied inefficient OSPF configuration, leading to cleaner and better functioning network",
+        "Implemented Ansible to make configuration changes across multiple sites and devices",
+        "Attended NANOG to gain a better understanding of industry practices",
+        "Configured safeguards to mitigate against amplification attacks and DDOS",
+        "Replaced proprietary script only backing up certain vendor configuration with open source tool, Rancid, to backup configurations from multiple vendors",
+        "Deployed Netflow to gain a better insight of network traffic patterns",
+        "Created documentation and network diagrams",
+        "Designed high availability networks with redundancy and scalability in mind",
+        "Evaluated and selected new hardware",
+        "Configured and maintained; Juniper MX routers, Juniper QFX/EX switches, Juniper SRX firewalls, A10 load balancers, Cisco routers/firewalls/switches and various other products"
+      ]
+    },
+    {
+      "company": "",
+      "position": "Previous network and systems experience begins with UUNet in 1998 and includes; AT&T Wifi Services, Pace, and Mobile 365 / Sybase",
+      "website": "",
+      "startDate": "1998-01-01",
+      "endDate": "2012-07-01",
+      "summary": "",
+      "highlights": [
+        "Deployed wireless and wired solutions to McDonalds and Starbucks",
+        "Installed wireless solutions at AT&T Park, AT&T Stadium and other large permanent venues"
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [],
+  "awards": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Knowledge:",
+      "level": "",
+      "keywords": [
+        "Apple",
+        "Ansible",
+        "AWS",
+        "Bacula",
+        "BIRD",
+        "BGP",
+        "CentOS",
+        "Cumulus Linux",
+        "Debian",
+        "DNS",
+        "Docker",
+        "FreeBSD",
+        "GCP",
+        "Git",
+        "GitLab",
+        "Go",
+        "IPSec",
+        "IPv4",
+        "IPv6",
+        "KVM",
+        "Layers1-7",
+        "Napalm",
+        "OpenVPN",
+        "OSPF",
+        "pfSense",
+        "PKI",
+        "Proxmox",
+        "PXE",
+        "Python",
+        "Quagga/FRR",
+        "SaltStack",
+        "SNMP",
+        "STP",
+        "TCP/IP",
+        "Ubuntu",
+        "VMware",
+        "VRRP",
+        "Windows",
+        "Wireshark",
+        "Zabbix",
+        "ZFS"
+      ]
+    },
+    {
+      "name": "Vendor familiarity:",
+      "level": "",
+      "keywords": [
+        "Juniper",
+        "Cumulus",
+        "Cisco",
+        "Brocade",
+        "A10",
+        "HP",
+        "Dell",
+        "VMWare",
+        "Ruckus",
+        "pfSense"
+      ]
+    }
+  ],
+  "languages": [],
+  "interests": [],
+  "references": []
+}
