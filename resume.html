@@ -1,585 +1,762 @@
 <!doctype html>
 <html>
-	<head>
-
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 	<title>Matthew Fine</title>
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-
-	<style type="text/css">
-	@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic' rel='stylesheet' type='text/css'>
+	<style>
+		/********************************************
+* 	reset from
+* 	http://meyerweb.com/eric/tools/css/reset/
+*******************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-	background: #fff;
-	font-family: Lato, sans-serif;
-	font-weight: 300;
-	font-size: 16px;
-	margin: 0 0 80px;
-	color: #222;
+	line-height: 1;
 }
-b, strong, .area {
-font-weight: 400;
-color: #333;
+ol, ul {
+	list-style: none;
 }
-a {
-	color: #2A94D6;
+blockquote, q {
+	quotes: none;
 }
-a:focus,
-a:hover {
-	color: #F3AE4E;
-	text-decoration: none;
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Custom reset */
+.main-summary p, 
+#publications .item,
+#skills .item,
+#languages .item,
+#references .item,
+#interests .item{
+	margin: 0;
+}
+
+
+/****************
+*		SMARTPHONES		
+****************/
+em {
+	color: #757575;
 }
 p {
-	line-height: 1.5;
-	margin: 0;
-}
-p + p {
-	margin-top: 10px;
-}
-h1,
-h2,
-h3,
-h4 {
-	margin-top: 0;
-	font-weight: 400;
-	color: #333;
-}
-h1 {
-	font-size: 2em;
-}
-h2 {
-	font-size: 1.8em;
-}
-h3 {
-	font-size: 1.5em;
-}
-h4 {
-	font-size: 1.2em;
-}
-.date {
-	font-weight: 400;
-}
-section {
-	margin-top: 30px;
-}
-li {
-	line-height: 1.5;
-	list-style: none;
-	padding-bottom: 5px;
-}
-li:before {
-	content: "\f052";
-	float: left;
-	font: 13px Octicons;
-	margin-top: 6px;
-	margin-left: -20px;
-	opacity: .2;
-	position: absolute;
+	margin: 1em 0;
 }
 blockquote {
-	border-left: 5px solid #e7e9ec;
-	font-size: 14px;
-}
-em {
-	color: #95a5a6;
-	font-weight: 700;
-	font-style: normal;
-}
-
-.container {
-	max-width: 750px;
-	padding: 0 30px;
-}
-.col-sm-6 {
-	margin-bottom: 10px;
-}
-.col-sm-12 h4 {
-	margin-top: 12px;
-}
-.col-sm-12 + .col-sm-12 {
-	margin-top: 30px;
-}
-#header {
-	background: #F0F1F2;
-	padding: 50px 0;
-	margin-bottom: 30px;
-}
-#header h2 {
-	color: #647687;
-	font-size: 1.5em;
-	font-weight: 300;
-}
-#content h3 {
-	color: #F3AE4E;
-	margin-top: -4px;
-	font-weight: 400;
-}
-#content aside {
-	text-align: right;
-	padding-right: 30px;
-}
-#profiles .network {
-	text-transform: capitalize;
-}
-#work .position,
-#volunteer .position {
-	font-weight: 400;
-	margin-bottom: 8px;
-}
-#education .area {
-	font-weight: 700;
-}
-#education .area:before {
-	content: "\f0d7";
-	font: 16px Octicons;
-	margin-right: 6px;
-}
-#education .studyType {
-	margin-left: 25px;
-}
-#awards .summary,
-#publications .summary {
-	margin-top: 8px;
-}
-#publications .website a:before {
-	content: attr(href);
-}
-#skills .keywords, #education .courses {
-	padding: 0;
 	margin: 0;
+	margin-bottom: 1em;
 }
-#skills .keywords li:before, #education .courses li:before {
-	content: "";
+strong {
+	font-weight: 700;
+	font-size: 1.1em;
 }
-#skills .keywords li, #education .courses li {
+ul {
+	margin-top: 1em; 
+}
+div.item {
+	margin: 1em 0 2em;
+	padding-bottom: 2em;
+}
+div.item:last-of-type {
+	margin: 0;
+	border-bottom: none;
+	padding-bottom: 0;
+}
+p {
+	text-align: justify;
+}
+
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+h1 {
+	font-size: 2.5rem;
+}
+h2,
+h3 {
+	font-size: 1rem;
+}
+a {
+	color: #EB5F51;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+/* Layout */
+body {
+	background: #f2f2f2;
+	line-height: 1.6;
+	font-size: 13px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#resume {
+	padding: 1rem 0;
+	margin: 1rem auto;
+}
+
+#header {
+	padding: 0 1em;
+	margin-bottom: 1em;
+}
+
+#resume > header div {
+	display: table;
+	padding-left: 0.5em;
+}
+
+#resume > header div.middle {
+	padding-top: 1.5em;
+}
+
+header img {
+	display: block;
+	width: 10em;
+	border-radius: 0.275em;
+	float: right;
+	vertical-align: middle;
+}
+
+header .name {
+	line-height: 1;
+}
+
+header .label {
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: #757575;
+}
+
+section:not(.section) {
+	padding: .5em 1rem;
+}
+
+section#references {
+	border-bottom:none;
+}
+
+section#basics {
+	background: inherit;
+	margin-bottom: 0;
+}
+
+section#skills {
+	padding-bottom: 0;
+}
+
+section#education, 
+section#work, 
+.main-summary section {
+	padding-bottom: 1em;
+}
+
+header::after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+
+h2.section-title {
+	text-align: left;
+	font-size: 1rem;
+	font-weight: 400;
+	color: #757575;
+	padding: 1em 1rem 0;
+	margin-bottom: 0.1275em;
+}
+
+.date {
+	font-weight: 700;
+	color: #757575;
+}
+
+.position, .area, .institution {
+	font-weight: 700;
+}
+
+#interests .item, #languages .item {
+	padding: 0 1em 1em 0;
+	border-bottom: none;
+}
+
+.website::before {
 	display: inline-block;
-	padding: 0px 6px;
-	margin: 3px 4px 4px 0;
-	border: 1px solid #ccc;
-	line-height: 1.5em;
-	border-radius: 1px;
-	background-color: #fafafa
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-decoration: none;
+	min-width: 1.25em;
+	margin-right: 0.25em;
+	text-align: center;
+	content: '\f14c';
 }
 
-@media (min-width: 480px) {
-	.strike-through {
-		border-top: 1px solid #f4f6f6;
-		height: 20px;
-		margin-top: 12px;
-		margin-bottom: -2px;
-		position: relative;
+#profiles, #skills, #interests, #languages {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+  padding-bottom: 1em;
+}
+
+#profiles, #location {
+	box-shadow: none;
+	padding: 0;
+}
+
+#profiles .item {
+	margin: 0;
+	padding: 0;
+	padding-right: 1em;
+	border-bottom: none;
+}
+
+#interests ul {
+	margin-top: 0.5em;
+}
+
+#publications .name {
+	font-style: italic;
+}
+
+.courses li, .keywords li{
+	display: inline-block;
+	background: #f0f0f0;
+	font-size: 0.9em;
+	line-height: 1;
+	color: #333;
+	padding: 0.4em 0.8em;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-radius: 3px;
+}
+
+#publications .date {
+	font-weight: normal;
+	color: #000;	
+}
+
+#skills .item {
+	min-width: 15em;
+	padding: 0 .5em .8em 0;
+	border-bottom: none;
+}
+
+
+/* Skills chart */
+#skills .level .bar {
+	border: 1px solid #ddd;
+	display: block;
+	width: 10em;
+	height: 5px;
+	margin: 0em 0 1em 0;
+	position: relative;
+}
+
+#skills .level .bar::after {
+	position: absolute;
+	content: " ";
+	top: 0;
+	left: 0;
+	background: black;
+	height: 5px;
+}
+
+#skills .level.beginner .bar::after {
+	background: #EB5F51;
+	width: 2.5em;
+} 
+
+#skills .level.intermediate .bar::after {
+	background: #ffdf1f;
+	width: 5em;
+} 
+
+#skills .level.advanced .bar::after {
+	background: #59C596;
+	width: 7.5em;
+} 
+
+#skills .level.master .bar::after {
+	background: #5CB85C;
+	width: 10em;
+}
+
+#references .item {
+	padding-left: 1em;
+	border-left: 5px solid #EB5F51;
+}
+
+.fa.social {
+	margin-right: 0.25em;
+	font-size: 1.1em;
+}
+
+/* Social Media Brand Colors */
+.google-plus {
+	color: #dd4b39;	
+}
+
+.tumblr {
+	color:#32506d;
+}
+
+.foursquare {
+	color:  #0072b1;
+}
+
+.facebook {
+	color: #3b5998;
+}
+
+.linkedin {
+	color: #007bb6;
+}
+
+.pinterest {
+	color: #cb2027;
+}
+
+.dribbble {
+	color: #ea4c89;
+}
+
+.instagram {
+	color: #517fa4;
+}
+
+.twitter {
+	color: #00aced;
+}
+
+.soundcloud { 
+	color: #ff3a00;
+}
+
+.wordpress {
+	color: #21759b;
+}
+
+.youtube {
+	color: #bb0000;
+}
+
+.github {
+	color: #171515;
+}
+
+.stack-overflow {
+	color: #828386;
+	position: relative;
+}
+
+.flickr {
+	color: #ff0084;
+}      
+
+.stack-overflow::after {
+	position: absolute;
+	left: 0;
+	content: '\f16c';
+	color: #f68a1f;
+	overflow: hidden;
+	height: 40%;
+}
+
+/******************
+*		HELPER CLASSES	
+******************/
+.fa {
+	min-width: 1.25em;
+	margin-right: 0.25em;
+	text-align: center;
+}
+
+.clear {
+	display: table;
+	clear: both;
+}
+
+
+/****************
+*		TABLET
+****************/
+@media screen and (min-width: 602px) { 
+	
+	#resume {
+		width: 550px;
+		margin: 0 auto;
 	}
-	.strike-through span,
-	.strike-through a {
+	section > header > h3 {
+		float:left;
+	}
+	section > header > .date {
+		float: right;
+		line-height: 1.3;
+	}
+
+}
+
+
+/****************
+*		LAPTOP	
+****************/
+@media screen and (min-width: 1025px) { 
+	
+	#resume {
+		width: 650px;		
+		padding: 3em;
+		margin: 3em auto;
 		background: #fff;
-		position: absolute;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 	}
-	.strike-through span:first-child {
-		padding-right: 20px;
-		margin-top: -12px;
+
+	.section {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		margin-bottom: 1em;
+		margin-top: 1em;
+		border-bottom: 1px solid #eee;
 	}
-	.strike-through span + span {
-		font-size: 14px;
-		margin-top: -10px;
-		padding-left: 20px;
-		right: 0;
+
+	.section:last-of-type {
+		border-bottom: none;
+		margin-bottom: 0;
 	}
-}
-@media (max-width: 768px) {
-	.col-sm-6:last-child {
-		margin-bottom: 0px;
+
+	section > header {
+		line-height: 1;
+		padding-bottom: 1em; 
 	}
-	#content aside {
-		margin-bottom: 10px;
-		padding-right: 0;
-		text-align: left;
+
+	h2.section-title {
+		line-height: 1.1;
+		padding-top: 0;
 	}
-	#publications .website a:before {
-		content: "View publication";
-	}
-	.work-item {
-		padding-bottom: 10px
-	}
-	.work-item:last-child {
-		padding-bottom: 0;
-	}
-}
-@media (max-width: 480px) {
-	#content {
-		padding: 15px;
-	}
-	.container {
-		padding: 0 15px;
-	}
-	h1 {
-		font-size: 1.5em;
-	}
-	h2 {
-		font-size: 1.4em;
-	}
-	h3 {
-		font-size: 1.3em;
-	}
-	h4 {
-		font-size: 1em;
-	}
-	.date {
-		margin-bottom: 5px;
-	}
-	.strike-through span:first-child {
-		margin-bottom: 7px;
-	}
-	.strike-through span {
-		display: block;
-	}
-	#header {
-		margin-bottom: 0px;
-		padding: 20px 0;
-	}
-	#header h2 {
-		font-size: 1.2em;
-	}
-	#actions {
-		display: none;
-	}
-	section {
-		margin-top: 20px;
-		margin-bottom: 30px;
-	}
-	.website.pull-right {
-		float: none !important;
-	}
-}
-@media print {
-	body {
-		margin: 0;
-		font-size: 12px
-	}
-	#header {
-		padding: 0;
-		margin-bottom: 0px;
-	}
-	#content aside {
-		margin-bottom: 0px;
-	}
-	section {
-		margin-top: 25px;
-	}
-	.col-sm-6 {
-		margin-bottom: 0px;
-	}
-	.col-sm-12 h4 {
-		margin-top: 0px;
-	}
-	.strike-through {
+
+	section:not(.section) {
+		width: 34.5em;
+		padding: 0 1em 1em 0;
+		margin-top:0;
 		border: none;
-		margin: 0px 0 0;
-		padding: 10px 0 5px;
-		height: auto;
-		line-height: 1em;
 	}
-	#work .position, #volunteer .position, #work .summary, #volunteer .summary {
-		margin-bottom: 0px;
-		padding-bottom: 8px;
+
+	section p {
+		margin: 0;
 	}
-	.work-item {
-		padding-bottom: 0px;
-		page-break-inside: avoid;
+
+	section#basics {
+		width: auto;
+		padding-top: 1em;
+		padding-left: 1em;
+		padding-bottom: 0;
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
 	}
-	#volunteer{
-		page-break-inside: avoid;
+
+	#profiles .item{
+		padding-bottom: 1em;
 	}
-	#awards{
-		page-break-inside: avoid;
+
+	div {
+		padding: 0;
 	}
-	#skills {
-		page-break-inside: avoid;
+
+	#skills .item {
+		padding-left:0;
+		margin-top: 0;
 	}
-	.website {
-		display: none;
+
+	div.item {
+		margin-top: 0;
+		border-bottom: 1px solid #eee;
 	}
+
 }
-
 	</style>
+	
 
-	</head>
 	<body>
+		<div id="resume">
+				<header id="header">
+						<div>
+							<h1 class="name">Matthew Fine</h1>
+							<h2 class="label">Network and Systems Engineer</h2>
+						</div>
 
-	<header id="header">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-9 col-sm-push-3">
-					<h1>
-						Matthew Fine
-					</h1>
-					<h2>
-						Network and Systems Engineer
-					</h2>
-				</div>
-			</div>
-		</div>
-	</header>
-	<div id="content" class="container">
+				</header>
+				
+				<section id="basics">
+					
+						<div id="location">
+						</div>
 
-	<section id="contact" class="row">
-		<aside class="col-sm-3">
-			<h3>Contact</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-6">
-				<strong>Email</strong>
-				<div class="email"><a href="mailto:matt.fine@gmail.com" target="_blank">matt.fine@gmail.com</a></div>
-			</div>
-			<div class="col-sm-6">
-				<strong>Phone</strong>
-				<div class="phone">571-723-2234</div>
-			</div>
-			</div>
-		</div>
-	</section>
-	<section id="about" class="row">
-		<aside class="col-sm-3">
-			<h3>About</h3>
-		</aside>
-		<div class="col-sm-9">
-			<p>Professional Network and Systems Engineer with experience in corporate, public service and large distributed networks with a strong emphasis on scalability, supportability, and longevity.</p>
-		</div>
-	</section>
-	<section id="profiles" class="row">
-		<aside class="col-sm-3">
-			<h3>Profiles</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-				<div class="col-sm-6">
-					<strong class="network">
-						LinkedIn
-					</strong>
-					<div class="username">
-						<div class="url">
-							<a href="https://www.linkedin.com/in/finematthew/" target="_blank">finematthew</a>
+					<div id="contact">
+						<div class="website">
+							<a href="https://www.easytyger.com/resume">https://www.easytyger.com/resume</a>
+						</div>
+						<div class="email">
+							<span class="fa fa-envelope"></span>
+							<a href="mailto:matt.fine@gmail.com">matt.fine@gmail.com</a>
+						</div>
+						<div class="phone">
+							<span class="fa fa-phone-square"></span>
+							571-723-2234
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-6">
-					<strong class="network">
-						GitHub
-					</strong>
-					<div class="username">
-						<div class="url">
-							<a href="https://github.com/chewrocca" target="_blank">chewrocca</a>
+				
+
+					<div id="profiles">
+						<div class="item">
+							<span class="network fa fa-linkedin linkedin"></span>
+							<span class="username">
+								<span class="url">
+									<a href="https://www.linkedin.com/in/finematthew/">finematthew</a>
+								</span>
+							</span>
+						</div>
+						<div class="item">
+							<span class="network fa fa-github github"></span>
+							<span class="username">
+								<span class="url">
+									<a href="https://github.com/chewrocca">chewrocca</a>
+								</span>
+							</span>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+				</section>
 
-	<section id="work" class="row">
-		<aside class="col-sm-3">
-			<h3>Work</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-12 work-item">
-				<h4 class="strike-through">
-					<span>Netgate / pfSense</span>
-					<span class="date">
-						2016-01-11 — 2018-03-31
-					</span>
-				</h4>
-				<div class="website pull-right">
-					<a href="https://www.netgate.com" target="_blank">https://www.netgate.com</a>
-				</div>
-				<div class="position">
-					Network and Systems Engineer
-				</div>
-				<div class="summary">
-					<p></p>
-				</div>
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					<li class="bullet">Setup Juniper Zero Touch Provisioning on switches for fully automated deployments.</li>
-					<li class="bullet">Automated desktops OS and software installation and configuration using PXE boot and Kickstart to deploy no-touch provision systems.</li>
-					<li class="bullet">Deployed site-wide Ruckus virtualized Zone Director and Ruckus APs.</li>
-					<li class="bullet">Identified issues in the network related to L2 and L3 designs, implemented and documented changes.</li>
-					<li class="bullet">Installed and configured BIRD for FreeBSD systems to use as eBGP routers connecting to upstream internet providers.</li>
-					<li class="bullet">Configured GitLab for our developers and used GitLab for revision control with gitfs for SaltStack.</li>
-					<li class="bullet">Wrote SaltStack formulas to automate and help maintain consistency throughout the network.</li>
-					<li class="bullet">Setup IPsec site-to-site connectivity for satellite locations and remote employees.</li>
-					<li class="bullet">Leveraged Bacula backup system to develop a backup solution for our servers and databases.</li>
-					<li class="bullet">Procured /32 IPv6 space from ARIN, allocated and architected in our environment.</li>
-					<li class="bullet">Documented all work using RST and published on internal site.</li>
-				</ul>
-			</div>
-			<div class="col-sm-12 work-item">
-				<h4 class="strike-through">
-					<span>Giganews / Golden Frog</span>
-					<span class="date">
-						2012-07-01 — 2016-01-01
-					</span>
-				</h4>
-				<div class="website pull-right">
-					<a href="https://www.goldenfrog.com" target="_blank">https://www.goldenfrog.com</a>
-				</div>
-				<div class="position">
-					Senior Network Engineer
-				</div>
-				<div class="summary">
-					<p></p>
-				</div>
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					<li class="bullet">Identified a BGP architecture that could optimize bandwidth distribution across multiple carriers. Took the initiative to plan and implement new architecture, resulting in savings to the company and better traffic control.</li>
-					<li class="bullet">Developed and executed plans to consolidate equipment in six data centers into two without downtime.</li>
-					<li class="bullet">Deployed networking gear at sites around the world connecting to multi-homed providers.</li>
-					<li class="bullet">Setup DWDM to connect fiber between our data centers.</li>
-					<li class="bullet">Discovered and remedied inefficient OSPF configuration, leading to cleaner and better functioning network.</li>
-					<li class="bullet">Implemented Ansible to make configuration changes across multiple sites and devices.</li>
-					<li class="bullet">Attended NANOG to gain a better understanding of industry practices.</li>
-					<li class="bullet">Configured safeguards to mitigate against amplification attacks and DDOS.</li>
-					<li class="bullet">Replaced proprietary script only backing up certain vendor configuration with open source tool, Rancid, to backup configurations from multiple vendors.</li>
-					<li class="bullet">Deployed Netflow to gain a better insight of network traffic patterns.</li>
-					<li class="bullet">Created documentation and network diagrams.</li>
-					<li class="bullet">Designed high availability networks with redundancy and scalability in mind.</li>
-					<li class="bullet">Evaluated and selected new hardware.</li>
-					<li class="bullet">Configured and maintained; Juniper MX routers, Juniper QFX/EX switches, Juniper SRX firewalls, A10 load balancers, Cisco routers/firewalls/switches and various other products.</li>
-				</ul>
-			</div>
-			<div class="col-sm-12 work-item">
-				<h4 class="strike-through">
-					<span></span>
-					<span class="date">
-						1998-01-01 — 2012-07-01
-					</span>
-				</h4>
-				<div class="website pull-right">
-					<a href="" target="_blank"></a>
-				</div>
-				<div class="position">
-					Previous network and systems experience begins with UUNet in 1998 and includes; AT&amp;T Wifi Services, Pace, and Mobile 365 / Sybase.
-				</div>
-				<div class="summary">
-					<p></p>
-				</div>
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					<li class="bullet">Deployed wireless and wired solutions to McDonalds and Starbucks.</li>
-					<li class="bullet">Installed wireless solutions at AT&amp;T Park, AT&amp;T Stadium and other large permanent venues.</li>
-					<li class="bullet">More information upon request.</li>
-				</ul>
-			</div>
-			</div>
-		</div>
-	</section>
+				<section class="section main-summary">
+					<h2 class='section-title'>About</h2>
+					<section>
+						<p>Professional Network and Systems Engineer with experience in corporate, public service and large distributed networks with a strong emphasis on scalability, supportability, and longevity.</p>
+					</section>
+				</section>
 
+				</section>
 
-
-
-
-	<section id="skills" class="row">
-		<aside class="col-sm-3">
-			<h3>Skills</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-12">
-				<div class="name">
-					<h4 class="strike-through">
-						<span>Knowledge:</span>
-					</h4>
-				</div>
-				<ul class="keywords">
-					<li>Apple</li>
-					<li>Ansible</li>
-					<li>AWS</li>
-					<li>Bacula</li>
-					<li>BIRD</li>
-					<li>BGP</li>
-					<li>CentOS</li>
-					<li>Cumulus Linux</li>
-					<li>Debian</li>
-					<li>DNS</li>
-					<li>Docker</li>
-					<li>FreeBSD</li>
-					<li>FRR</li>
-					<li>GCP</li>
-					<li>Git</li>
-					<li>GitLab</li>
-					<li>Go</li>
-					<li>IPSec</li>
-					<li>IPv4</li>
-					<li>IPv6</li>
-					<li>KVM</li>
-					<li>Layers1-7</li>
-					<li>Napalm</li>
-					<li>OpenVPN</li>
-					<li>OSPF</li>
-					<li>pfSense</li>
-					<li>PKI</li>
-					<li>Proxmox</li>
-					<li>PXE</li>
-					<li>Python</li>
-					<li>Quagga</li>
-					<li>SaltStack</li>
-					<li>SNMP</li>
-					<li>STP</li>
-					<li>TCP/IP</li>
-					<li>Ubuntu</li>
-					<li>VMware</li>
-					<li>VRRP</li>
-					<li>Windows</li>
-					<li>Wireshark</li>
-					<li>Zabbix</li>
-					<li>ZFS</li>
-				</ul>
-			</div>
-			<div class="col-sm-12">
-				<div class="name">
-					<h4 class="strike-through">
-						<span>Vendor familiarity:</span>
-					</h4>
-				</div>
-				<ul class="keywords">
-					<li>Juniper</li>
-					<li>Cumulus</li>
-					<li>Cisco</li>
-					<li>Brocade</li>
-					<li>A10</li>
-					<li>HP</li>
-					<li>Dell</li>
-					<li>VMWare</li>
-					<li>Ruckus</li>
-					<li>pfSense</li>
-				</ul>
-			</div>
-			</div>
-		</div>
-	</section>
-
-
-
-	<section id="references" class="row">
-		<aside class="col-sm-3">
-			<h3>References</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-				<div class="col-sm-12">
-					<div>
-						<strong>Upon request</strong>
+				<section class="section">
+					<h2 class='section-title'>Experience</h2>
+					<section id="work">
+						<header>
+							<h3 class="name">
+								Netgate / pfSense
+							</h3>
+							<div class="date">
+								<span class="startDate">
+									January 2016
+								</span>
+								<span class="endDate">
+									- March 2018
+								</span>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Network and Systems Engineer
+						</div>
+						<div class="website">
+							<a href="https://www.netgate.com">https://www.netgate.com</a>
+						</div>
+						<ul class="highlights">
+							<li>Setup Juniper Zero Touch Provisioning on switches for fully automated deployments.</li>
+							<li>Automated desktops OS and software installation and configuration using PXE boot and Kickstart to deploy no-touch provision systems.</li>
+							<li>Deployed site-wide Ruckus virtualized Zone Director and Ruckus APs.</li>
+							<li>Identified issues in the network related to L2 and L3 designs, implemented and documented changes.</li>
+							<li>Installed and configured BIRD for FreeBSD systems to use as eBGP routers connecting to upstream internet providers.</li>
+							<li>Configured GitLab for our developers and used GitLab for revision control with gitfs for SaltStack.</li>
+							<li>Wrote SaltStack formulas to automate and help maintain consistency throughout the network.</li>
+							<li>Setup IPsec site-to-site connectivity for satellite locations and remote employees.</li>
+							<li>Leveraged Bacula backup system to develop a backup solution for our servers and databases.</li>
+							<li>Procured /32 IPv6 space from ARIN, allocated and architected in our environment.</li>
+							<li>Documented all work using RST and published on internal site.</li>
+						</ul>
 					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+						<header>
+							<h3 class="name">
+								Giganews / Golden Frog
+							</h3>
+							<div class="date">
+								<span class="startDate">
+									July 2012
+								</span>
+								<span class="endDate">
+									- January 2016
+								</span>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Senior Network Engineer
+						</div>
+						<div class="website">
+							<a href="https://www.goldenfrog.com">https://www.goldenfrog.com</a>
+						</div>
+						<ul class="highlights">
+							<li>Identified a BGP architecture that could optimize bandwidth distribution across multiple carriers. Took the initiative to plan and implement new architecture, resulting in savings to the company and better traffic control.</li>
+							<li>Developed and executed plans to consolidate equipment in six data centers into two without downtime.</li>
+							<li>Deployed networking gear at sites around the world connecting to multi-homed providers.</li>
+							<li>Setup DWDM to connect fiber between our data centers.</li>
+							<li>Discovered and remedied inefficient OSPF configuration, leading to cleaner and better functioning network.</li>
+							<li>Implemented Ansible to make configuration changes across multiple sites and devices.</li>
+							<li>Attended NANOG to gain a better understanding of industry practices.</li>
+							<li>Configured safeguards to mitigate against amplification attacks and DDOS.</li>
+							<li>Replaced proprietary script only backing up certain vendor configuration with open source tool, Rancid, to backup configurations from multiple vendors.</li>
+							<li>Deployed Netflow to gain a better insight of network traffic patterns.</li>
+							<li>Created documentation and network diagrams.</li>
+							<li>Designed high availability networks with redundancy and scalability in mind.</li>
+							<li>Evaluated and selected new hardware.</li>
+							<li>Configured and maintained; Juniper MX routers, Juniper QFX/EX switches, Juniper SRX firewalls, A10 load balancers, Cisco routers/firewalls/switches and various other products.</li>
+						</ul>
+					</div>
+							<div class="date">
+								<span class="startDate">
+									January 1998
+								</span>
+								<span class="endDate">
+									- July 2012
+								</span>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Previous network and systems experience begins with UUNet in 1998 and includes; AT&amp;T Wifi Services, Pace, and Mobile 365 / Sybase.
+						</div>
+						<ul class="highlights">
+							<li>Deployed wireless and wired solutions to McDonalds and Starbucks.</li>
+							<li>Installed wireless solutions at AT&amp;T Park, AT&amp;T Stadium and other large permanent venues.</li>
+						</ul>
+					</div>
+					</section>
+				</section>
+		
+		
+			
 
-	</div>
+		
+		
+				<section class="section">
+					<h2 class='section-title'>Skills</h2>
+					<section id="skills">
+						<div class="item">
+							<div class="name">
+								Knowledge:
+							</div>
+							<ul class="keywords">
+								<li>Apple</li>
+								<li>Ansible</li>
+								<li>AWS</li>
+								<li>Bacula</li>
+								<li>BIRD</li>
+								<li>BGP</li>
+								<li>CentOS</li>
+								<li>Cumulus Linux</li>
+								<li>Debian</li>
+								<li>DNS</li>
+								<li>Docker</li>
+								<li>FreeBSD</li>
+								<li>FRR</li>
+								<li>GCP</li>
+								<li>Git</li>
+								<li>GitLab</li>
+								<li>Go</li>
+								<li>IPSec</li>
+								<li>IPv4</li>
+								<li>IPv6</li>
+								<li>KVM</li>
+								<li>Layers1-7</li>
+								<li>Napalm</li>
+								<li>OpenVPN</li>
+								<li>OSPF</li>
+								<li>pfSense</li>
+								<li>PKI</li>
+								<li>Proxmox</li>
+								<li>PXE</li>
+								<li>Python</li>
+								<li>Quagga</li>
+								<li>SaltStack</li>
+								<li>SNMP</li>
+								<li>STP</li>
+								<li>TCP/IP</li>
+								<li>Ubuntu</li>
+								<li>VMware</li>
+								<li>VRRP</li>
+								<li>Windows</li>
+								<li>Wireshark</li>
+								<li>Zabbix</li>
+								<li>ZFS</li>
+							</ul>
+						</div>
+						<div class="item">
+							<div class="name">
+								Vendor familiarity:
+							</div>
+							<ul class="keywords">
+								<li>Juniper</li>
+								<li>Cumulus</li>
+								<li>Cisco</li>
+								<li>Brocade</li>
+								<li>A10</li>
+								<li>HP</li>
+								<li>Dell</li>
+								<li>VMWare</li>
+								<li>Ruckus</li>
+								<li>pfSense</li>
+							</ul>
+						</div>
+					</section>
+				</section>
 
+
+		
+		</div>		
 	</body>
+	
 </html>
