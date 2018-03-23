@@ -37,7 +37,7 @@
       "summary": "",
       "highlights": [
         "Setup Juniper Zero Touch Provisioning on switches for fully automated deployments.",
-        "Automated desktops OS and software installation and configuration using PXE boot and Kickstart to deploy no-touch provision systems.",
+        "Automated desktops OS and software installation and configuration using PXE boot and Kickstart to deploy no-touch provisioned systems.",
         "Deployed site-wide Ruckus virtualized Zone Director and Ruckus APs.",
         "Identified issues in the network related to L2 and L3 designs, implemented and documented changes.",
         "Installed and configured BIRD for FreeBSD systems to use as eBGP routers connecting to upstream internet providers.",
