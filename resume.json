@@ -29,6 +29,27 @@
   },
   "work": [
     {
+      "company": "The Home Depot",
+      "position": "Senior Software Developer",
+      "website": "https://www.homedepot.com",
+      "startDate": "2018-06-18",
+      "endDate": "2019-11-04",
+      "summary": "",
+      "highlights": [
+        "SRE roll within the supply chain group at The Home Depot.",
+        "Helping teams gain a better insight into their systems and applications with the following.",
+        "Building containers with Docker.",
+        "Orchestrating containers using Docker Swarm or Kubernetes.",
+        "Scraping metrics using Prometheus and graphing those metrics with Grafana, and alerting on those metrics using AlertManager",
+        "Lifting and shipping containers to Cloud or On-premise.",
+        "Using a 12-Factor mindset to build applications.",
+        "Wrangling cattle while still lovingly caring for some pets still left behind (free-range cattle).",
+        "Automating all the repetitive tasks and automating for quicker, safer, and faster deployments.",
+        "Creating actionable alerts.",
+        "Mentoring team members."
+      ]
+    },
+    {
       "company": "Netgate / pfSense",
       "position": "Network and Systems Engineer",
       "website": "https://www.netgate.com",
@@ -98,8 +119,10 @@
       "keywords": [
         "Apple",
         "Ansible",
+        "AppDynamics",
         "AWS",
         "Bacula",
+        "Bash",
         "BIRD",
         "BGP",
         "CentOS",
@@ -116,6 +139,7 @@
         "IPSec",
         "IPv4",
         "IPv6",
+        "Kubernetes",
         "KVM",
         "Layers1-7",
         "Napalm",
@@ -128,6 +152,7 @@
         "Python",
         "Quagga",
         "SaltStack",
+        "Shell Scripting",
         "SNMP",
         "STP",
         "TCP/IP",
@@ -137,7 +162,8 @@
         "Windows",
         "Wireshark",
         "Zabbix",
-        "ZFS"
+        "ZFS",
+        "ZSH"
       ]
     },
     {
